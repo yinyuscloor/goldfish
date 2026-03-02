@@ -45,7 +45,6 @@ jobs:
         with:
           path: |
             ${{ env.XMAKE_GLOBALDIR }}/.xmake/packages
-            ${{ github.workspace }}/build/.build_cache
           key: ${{ runner.os }}-xmake-${{ hashFiles('**/xmake.lua') }}
       - name: config
         run: xmake config --yes -vD
