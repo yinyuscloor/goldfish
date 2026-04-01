@@ -48,8 +48,8 @@ jobs:
 
       - name: Update devel/200_1.md
         run: |
-          sed -i "3i\\
-## ${{ env.NEW_VERSION_DATE }}   Goldfish Scheme v${{ env.NEW_VERSION }}" devel/200_1.md
+          header="## ${{ env.NEW_VERSION_DATE }}   Goldfish Scheme v${{ env.NEW_VERSION }}"
+          sed -i "3i\$header" devel/200_1.md
 
       - name: Git commit and tag
         run: |
